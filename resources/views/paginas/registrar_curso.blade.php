@@ -4,7 +4,12 @@
 @section('contenido')
     <h1 class="text-center">Registrar Curso</h1>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="{{ route('registrarCurso') }}" method="post" enctype="multipart/form-data">
+        <!-- 
+            solicitamos token para enviar la informacion
+            no soportamos
+        -->
+        @csrf
         <label for="">Titulo</label>
         <input type="text" class="form-control" name="titulo">
 
