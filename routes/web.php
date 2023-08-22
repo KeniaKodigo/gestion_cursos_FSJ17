@@ -27,8 +27,11 @@ Route::get('/formulario',[CursosController::class, 'getForm']);
 
 //post, put, delete => token
 Route::post('/registro', [CursosController::class, 'store'])->name('registrarCurso');
+Route::get('/editar/{id}', [CursosController::class, 'editar'])->name('editarCurso');
 
+Route::put('/actualizar/{id}', [CursosController::class, 'update'])->name('actualizarCurso');
 
+Route::delete('/eliminar/{id}', [CursosController::class, 'destroy'])->name('eliminarCurso');
 
 
 

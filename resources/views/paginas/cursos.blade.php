@@ -15,8 +15,17 @@
                         <p class="card-text">{{$item->description}}</p>
                         <p class="card-text"><strong>Precio: </strong> ${{$item->price}}</p>
                         <p class="card-text"><strong>Instructor: </strong> {{$item->instructor}}</p>
-                        <a href="#" class="btn btn-primary">Editar</a>
-                        <a href="#" class="btn btn-danger">Eliminar</a>
+                        <form action="{{ route('editarCurso', $item->id) }}" method="post">
+                            @method('GET')
+                            @csrf
+                            <button class="btn btn-primary">Editar</button>
+                        </form>
+                        
+                        <form action="{{ route('eliminarCurso', $item->id) }}" method="post">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn btn-danger">Eliminar</button>
+                        </form>
                     </div>
                 </div>
             </div>
