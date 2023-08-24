@@ -3,8 +3,9 @@
 @section('contenido')
     <h1 class="text-center text-primary">Cursos Disponibles</h1>
 
-    <a href="{{ url('/formulario') }}" class="btn btn-dark">Registrar Curso</a>
+    <a href="{{ url('/formulario') }}" class="btn btn-dark mb-4">Registrar Curso</a>
     
+    <a href="{{ url('/reporte_cursos') }}" target="__blank" class="btn btn-success mb-4">Exportar PDF</a> 
     <div class="row">
         @foreach ($cursos as $item)
             <div class="col-md-4 mb-3">
